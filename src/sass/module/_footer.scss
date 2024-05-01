@@ -1,0 +1,117 @@
+@use "./module/variable" as var;
+
+.footer{
+    &__inner{
+        max-width: 600px;
+        margin: 0 auto;
+        &--bnr{
+            display: flex;
+            width: 100%;
+            width: 100%;
+
+            margin: 10px 0 20px;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                width: 32%;
+                min-width: 32%;
+                display: block;
+                margin: 0 1%;
+                img{
+                    border-radius: 3px;
+                }
+            }
+        }
+
+    }
+    &__inquiery{
+        max-width: 280px;
+        width: 80vw;
+        margin: 0 auto 30px;
+
+    }
+    &__copyright{
+        margin: 0;
+        text-align: center; 
+        font-size: 0.8em;
+    }
+    &__btm--wrapper{
+        display: flex;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+        justify-content: flex-end;
+        @media only screen and (max-width: var.$bp) {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 5%;
+        }
+    }
+    &__policy{
+        text-align: center;
+        
+        display: inline-block;
+        margin: 0 20px;
+        a{
+            display: inline-block;
+            color: #444;
+            font-size: 14px;
+            text-decoration: underline;
+            border-bottom: solid 1px #eee;
+            &:hover{
+                border-bottom: none;
+
+            }
+        }
+    }
+    &__sns{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 30px;
+
+        a{
+            margin: 0 10px;
+        }
+        &--insta{
+            text-indent: -9999px;
+            white-space: nowrap;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url('http://takanenonadeshiko.jp/wp-content/uploads/2022/08/icon_footer-insta.png') no-repeat 0 0;
+            background-size: 100% auto;
+        }
+        &--tiktok{
+            text-indent: -9999px;
+            white-space: nowrap;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url('http://takanenonadeshiko.jp/wp-content/uploads/2022/08/icon_footer-tiktok.png') no-repeat 0 0;
+            background-size: 100% auto;
+        }
+    }
+    //spサイズ
+    @media only screen and (max-width: var.$bp) {
+        &__inner{
+            &--bnr{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 20px 0;
+                padding: 0 5%;
+                justify-content: center;
+                align-items: center;
+                a{
+                    margin: 0 1% 10px;
+                    width: 48%;
+                }
+            }
+        }
+        &__inquiery{
+            margin: 0 auto 5vw;
+        }
+    }
+}
+
+
+

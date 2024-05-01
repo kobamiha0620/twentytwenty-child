@@ -1,0 +1,406 @@
+@use "./module/*" ;
+@use "./module/variable" as var;
+
+/* 共通サイズ */
+body{
+    box-sizing: border-box;
+    max-width: 100%;
+    color: var.$basic;
+  }
+
+*{
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEC_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEL_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEM_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEA_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEB_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEP_I28dnyM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEC_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEL_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEM_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEA_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEB_I28dnyMpxo.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/comfortaa/v40/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4TbMXL830efAesmwYSGPwxEP_I28dnyM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+
+  li{
+    margin: 0; 
+ }
+
+
+ .main{
+   &__subttl{
+     font-weight: normal;
+     letter-spacing: 0.8em;
+     margin-top: 0;
+     font-size: 1.5em;
+     color: #444444;
+     margin-bottom: 2em;
+   }
+   &__link{
+     text-decoration: none;
+     letter-spacing: 0.1em;
+     color: var.$pink;
+     height: 20px;
+     display: flex;
+     line-height: 0.8;
+     align-items: center;
+     justify-content: flex-end;
+     span{
+      background: url('./assets/images/arrow.png') no-repeat;
+      background-size: 100% auto;
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      margin: 0 0 0 10px;
+    }
+    &.plusWhite{
+        color: #444;
+        span{
+          background: url('./assets/images/arrow_bk2.png') no-repeat;
+          background-size: 100% auto;
+          display: inline-block;
+          width: 18px;
+          height: 14px;
+          margin: 0 0 0 10px;
+        }
+    }
+
+     &--wrapper{
+       text-align: right;
+     }
+   }
+ }
+
+li{
+  list-style-type: none;
+}
+
+html,body{
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+	position:absolute;/*描画固定*/
+	z-index:2;/*描画を一番下に*/
+	width: 100%;
+  top: 0;
+  background-color:rgba(0,0,0,0);
+
+}
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
+
+.pinkbg{
+  background-size: auto auto;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: repeating-linear-gradient(143deg, transparent, transparent 4px, rgba(252, 185, 206, 0.45) 4px, rgba(252, 185, 206, 0.45) 5px );
+}
+
+ul{
+  margin: 0;
+}
+
+.entry-title{
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+
+a{
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+
+
+
+.modal-menu > li > a, .modal-menu > li > .ancestor-wrapper > a {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.0375em;
+}
+.header-footer-group pre, .header-footer-group fieldset, .header-footer-group input, .header-footer-group textarea, .header-footer-group table, .header-footer-group table *, .footer-nav-widgets-wrapper, #site-footer, .menu-modal nav *, .footer-widgets-outer-wrapper, .footer-top {
+    border-color: #dcd7ca;
+}
+::-webkit-input-placeholder
+.modal-menu a {
+    display: block;
+    padding: 2rem 2.5rem;
+    text-decoration: none;
+    width: 100%;
+}
+
+.ewd-ufaq-faq-title-text{
+  font-family: 'Zen Maru Gothic', sans-serif!important;
+
+  h4{
+    font-family: 'Zen Maru Gothic', sans-serif!important;
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    @media only screen and (max-width: var.$bp) {
+      font-size: 18px;
+
+    }
+  }
+}
+
+.ewd-ufaq-faq-post{
+  p{
+    font-family: 'Zen Maru Gothic', sans-serif!important;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    color: #444444;
+    @media only screen and (max-width: var.$bp) {
+      font-size: 14px;
+
+    }
+  }
+}
+.ewd-ufaq-faq-div{
+  margin: 10px 0 !important;
+}
+.ewd-ufaq-faq-body{
+  padding-left: 38px!important;
+  background: url('./assets/images/icon_answer.png') no-repeat 0 12px;
+  background-size: 28px 28px;
+  @media only screen and (max-width: var.$bp) {
+    background-position: 5px 12px;
+    background-size: 22px 22px;
+  }
+}
+.ewd-ufaq-post-margin-symbol{
+  padding-top: 6px!important;
+  span{
+    text-indent: -9999px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url('./assets/images/icon_question2.png') no-repeat center bottom;
+    background-size: 100% auto;
+    @media only screen and (max-width: var.$bp) {
+      background-size: 22px 22px;
+      padding-top: 0!important;
+    }
+  }
+}
+div.ewd-ufaq-faq-title div.ewd-ufaq-post-margin-symbol {
+  margin: 0!important;
+}
+
+.modal-menu a{
+  color: var.$pink!important;
+}
+@media(min-width:var.$bp){
+  .featured-media-inner{
+    max-height: 500px;
+    height: 500px;
+    img{
+      max-height: 500px;
+      object-fit: contain;
+    }
+  }
+}
+
+
+
+//スケジュール
+
+#site-header{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 20;
+  background:rgba(255, 255, 255, 0)!important;
+}
+
+.pc{
+  display: block;
+}
+.sp{
+  display: none;
+}
+@media only screen and (max-width: var.$bp) {
+  .pc{
+    display: none;
+  }
+  .sp{
+    display: block;
+  }
+}
+
+.menu__sns{
+  display: flex;
+  a{
+    display: block;
+    margin-right: 16px;
+    margin-top: 20px;
+  }
+}
+
+
+//追記
+@media only screen and (max-width: var.$bp) {
+  .front__bnrs--wrapper{
+      margin:  0 0;
+  }
+  .front__news{
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+  .front__schedule{
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+  .front__youtube{
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+  .front__twitter{
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+  .footer__inner--bnr{
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+}
+
+//追記230630
+nav.primary-menu-wrapper{
+  .primary-menu{
+    li{
+      a{
+        color: var.$pinkbold!important;
+        font-family: 'Poppins', sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: var.$bp) {
+  .header-inner{
+    padding: 2rem 0;
+  }
+}
+
+
+
+#site-header{
+  background: rgba(244, 221, 233, 0.7)!important;
+}
+main{
+  padding-top: 140px;
+  @media only screen and (max-width: var.$bp) {
+    padding-top: 0;
+  }
+}
+body.home{
+  #site-header{
+    background: rgba(255, 255, 255, 0)!important;
+  }
+  main{
+    padding-top: 0;
+    
+  }
+}
+

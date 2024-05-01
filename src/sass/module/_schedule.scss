@@ -1,0 +1,78 @@
+@use "./module/variable"as var;
+//スケジュール
+.fc-left {
+    h2{
+        margin: 0 0 30px!important;
+        letter-spacing: 0.1em;
+    }
+    //spサイズ
+    @media only screen and (max-width: var.$bp) {
+        padding: 10vw 5%;
+
+    }
+}
+.fc-title, .fc-time{
+    font-size: 14px!important;
+    line-height: 1!important;
+    padding: 0!important;
+}
+
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide){
+    max-width: var.$pcbp!important;
+    margin: 0 auto;
+}
+
+.fc-event.fc-draggable, .fc-event[href]{
+    border-radius: 8px;
+    padding: 0 5px 5px;
+    display: inline-block!important;
+}
+
+.fc-unthemed th{
+    background-color: #f9e0e8!important;
+}
+
+//土曜日表示
+.eo-fullcalendar .fc-view-container .fc-view table tbody .fc-widget-content .fc-day-grid-container .fc-day-grid .fc-row .fc-content-skeleton table thead .fc-sun {
+    color: var.$pink;
+
+    }
+//日曜日の色を変える
+.eo-fullcalendar .fc-view-container .fc-view table tbody .fc-widget-content .fc-day-grid-container .fc-day-grid .fc-row .fc-content-skeleton table thead .fc-sat {
+    color: var.$perpul;
+    }
+.fc-row .fc-content-skeleton tbody td, .fc-row .fc-helper-skeleton tbody td{
+    padding: 0 5px!important;
+}
+@media only screen and (max-width: var.$bp) {
+    .fc-list-header-left{
+        float: right!important;
+        display: inline-block;
+        padding: 0 10px;
+        font-weight: normal;
+        color: #444444;
+        font-size: 12px;
+    }
+    .fc-list-header-right{
+        float: left!important;
+        display: inline-block;
+        padding: 0 10px;
+        &::after{
+            content: "日";
+            display: inline-block;
+
+        }
+    }
+    .fc-listDay-view .fc-row .fc-content-skeleton .fc-day-number, .fc-listMonth-view .fc-row .fc-content-skeleton .fc-day-number, .fc-listWeek-view .fc-row .fc-content-skeleton .fc-day-number {
+        border-bottom: dashed 1px #eee!important;
+    }
+    .fc-row .fc-content-skeleton tbody td, .fc-row .fc-helper-skeleton tbody td{
+        padding: 0 10px!important;
+    }
+}
+
+
+.eventorganiser-event-meta{
+    display: none;
+}

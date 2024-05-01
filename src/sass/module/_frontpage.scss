@@ -1,0 +1,24 @@
+@use "./module/variable" as var;
+
+.front{
+    &__fv{
+        width: 100vw;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__bnrs{
+        &--wrapper{
+
+        }
+        li{
+           margin: 0 10px; 
+        }
+    }
+    //spサイズ
+    @media only screen and (max-width: var.$bp) {
+
+    }
+}
+

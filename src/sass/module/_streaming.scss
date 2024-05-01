@@ -1,0 +1,299 @@
+@use "./module/variable"as var;
+
+.streaming{
+    width: 100vw;
+    padding: 0 0 100px;
+
+    &__blc {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 98px 60px 70px;
+    }
+    &__lists{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 94px;
+        li{
+            max-width: 30%;
+            width: 30%;
+            margin-right: 3%;
+            position: relative;
+            a{
+                text-decoration: none;
+                color: #444;
+            }
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+            &::before{
+                display: block;
+                padding-top: 100%;
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    &__name{
+        font-size: 18px;
+        margin: 10px 0; 
+    }
+    &__date{
+        font-size: 14px;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.1em;
+        line-height: 1;
+    }
+    &__cate{
+        color: var.$pinkbold;
+        font-size: 14px;
+        margin-top: 5px;
+        span{
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.1em;
+            &+span{
+                &::before{
+                    content: "・";
+                }
+            }
+        }
+    }
+    &__ttl {
+        background: url('http://takanenonadeshiko.jp/wp-content/uploads/2023/06/img_discograo.png') no-repeat 0 0;
+        background-size: 100% auto;
+        width: 415px;
+        height: 90px;
+        white-space: nowrap;
+        text-indent: -9999px;
+        text-align: center;
+        font-size: 0;
+        margin: 0 auto 100px;
+        padding: 0;
+    }
+
+
+
+    &__selectsp{
+        display: none;
+    }
+    &__selectpc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a{
+            display: inline-block;
+            border: solid 1px var.$pinkbold;
+            border-radius: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            color: var.$pinkbold;
+            font-size: 16px;
+            margin: 0 5px;
+            padding: 0 16px;
+            text-align: center;
+            transition: 0.3s;
+            text-decoration: none;
+            margin-bottom: 10px;
+            &:hover{
+                background: var.$pinkbold;
+                color: #FFF;
+                transition: 0.3s;
+             }
+
+
+
+        }
+    }
+
+    //spサイズ
+    @media only screen and (max-width: var.$bp) {
+        padding: 20vw 5% 10vw;
+        &__blc {
+            max-width: 100%;
+            padding: 0 0;
+        }
+        &__lists{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 30px;
+            li{
+                max-width: 48%;
+                width: 48%;
+                margin-right: 4%;
+                position: relative;
+
+                &:nth-child(even){
+                    margin-right: 0;
+                }
+            }
+        }
+        &__name{
+            font-size: 16px;
+            margin: 8px 0; 
+        }
+        &__date{
+            font-size: 14px;
+        }
+        &__cate{
+            font-size: 14px;
+            margin-top: 5px;
+            
+        }
+        &__ttl {
+            width: 300px;
+            height: 63px;
+            margin: 0 auto 80px;
+        }
+    
+    
+    
+        &__selectsp{
+            margin: 0 auto;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            &--wrapper{
+                display: flex;
+                justify-content: center;
+            }
+            &::after{
+                position: absolute;
+                right: 15px;
+                width: 10px;
+                height: 7px;
+                background-color: #FFF;
+                clip-path: polygon(0 0, 100% 0, 50% 100%);
+                content: '';
+                pointer-events: none;
+            }
+            select{
+                &::-ms-expand {
+                    display: none;
+                  }
+                display: block;
+                appearance: none;
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 0.1em;
+                font-weight: 300;
+                font-size:18px;
+                appearance: none;
+                min-width: 60vw;
+                height: 2.8em;
+                padding: 0 calc(.8em + 5px) 0 .8em;
+                border: none;
+                border-radius: 50px;
+                background-color: var.$pinkbold;
+                color: #FFF;
+                font-size: 1em;
+                cursor: pointer;
+            }
+
+
+        }
+        &__selectpc{
+            display: none;
+        }
+    }
+}
+
+#streaming {
+    background-color: #F4DDE9;
+}
+
+.ewd-ufaq-faq-title-text {
+    margin: 0 !important;
+
+    h4 {
+        margin: 0 !important;
+        line-height: 1;
+        color: var.$perpul;
+    }
+}
+
+body.page-id-163,
+body.page-id-1106{
+    main{
+        background-color: #F4DDE9;
+
+    }
+}
+
+
+body.category-discography{
+    .streaming__selectpc, .streaming__selectsp{
+        .select-discography{
+            background: var.$pinkbold;
+            color: #FFF;
+            transition: 0.3s;
+        }
+
+    }
+}
+
+
+body.category-single{
+    .streaming__selectpc, .streaming__selectsp{
+
+        .select-single{
+            background: var.$pinkbold;
+            color: #FFF;
+            transition: 0.3s;
+        }
+    }
+}
+
+body.category-album {
+    .streaming__selectpc, .streaming__selectsp{
+
+        .select-album{
+            background: var.$pinkbold;
+            color: #FFF;
+            transition: 0.3s;
+        }
+    }
+}
+
+body.category-blueray {
+    .streaming__selectpc, .streaming__selectsp{
+
+        .select-blueray{
+            background: var.$pinkbold;
+            color: #FFF;
+            transition: 0.3s;
+        }
+    }
+}
+body.category-streaming {
+    .streaming__selectpc, .streaming__selectsp{
+
+        .select-streaming{
+            background: var.$pinkbold;
+            color: #FFF;
+            transition: 0.3s;
+        }
+    }
+}
+
+body.category-other {
+    .streaming__selectpc, .streaming__selectsp{
+
+        .select-other{
+            background: var.$pinkbold;
+            color: #FFF;
+            transition: 0.3s;
+        }
+    }
+}

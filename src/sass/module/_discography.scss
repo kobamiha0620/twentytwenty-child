@@ -1,0 +1,268 @@
+@use "./module/variable"as var;
+
+.discography{
+    width: 100vw;
+    padding: 0 0 100px;
+    &__blc {
+        max-width: 980px;
+        padding: 0 30px;
+        margin: 0 auto;        
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img{
+        max-width: 420px;
+        margin-right: 20px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__txtblc{
+        width: 100%;
+        max-width: 450px;
+    }
+    &__cate{
+        margin: 0 0 10px;
+        li{
+            display: inline-block;
+            color: var.$pinkbold;
+            p{
+                line-height: 1;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                letter-spacing: 0.1em;
+                &::before{
+                    content: "・";
+                }
+            }
+
+            &:first-child{
+                p{
+                    &::before{
+                        content: none;
+                    }
+                }
+
+            }
+        } 
+    }
+    &__txt {
+        text-align: center;
+        color: var.$pinkbold;
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    &__subttl {
+        color: #444;
+        margin: 0 0 16px;
+        font-weight: normal;
+        line-height: 1.4;
+        font-size: 24px;
+        
+    }
+
+    &__date {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: #444;
+        letter-spacing: 0.1em;
+    }
+
+    &__tracklist {
+        background: url('http://takanenonadeshiko.jp/wp-content/uploads/2023/06/img_dotted.png') repeat-x 0 0;
+        background-size: 6px 2px;
+        width: 100%;
+        padding-top: 40px;
+        margin-top: 40px;
+        &--ttl{
+            color: var.$pinkbold;
+            font-family: 'Poppins', sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            margin: 0 0 26px;
+            line-height: 1;
+            letter-spacing: 0.1em;
+        }
+        &--txt{
+            font-weight: normal;
+            font-size: 16px;
+        }
+    }
+
+    &__streaming{
+        &--btn{
+            font-family: 'Poppins', sans-serif;
+            border-radius: 50px;
+            overflow: hidden;
+            text-decoration: none;
+            color: var.$pinkbold;
+            font-size: 16px;
+            background: transparent;
+            max-width: 240px;
+            position: relative;
+            border: solid 1px var.$pinkbold;
+            z-index: 1;
+            display: block;
+            overflow: hidden;
+            transition: .3s;
+            line-height: 0;
+            margin-top: 40px;
+            span{
+                position: relative;
+                display: block;
+                text-align: center;
+                line-height: 1.2;
+                letter-spacing: .1em;
+                padding: 1rem 0;
+                transition: .2s ease .2s;
+            }
+            &::before{
+                content: "";
+                width: 120%;
+                height: 200%;
+                position: absolute;
+                top: -50%;
+                right: 0;
+                z-index: -1;
+                background: var.$pinkbold;
+                border-radius: 0 100% 100% 0;
+                transform: translateX(-100%);
+                transition: transform ease .3s;
+            }
+            &:hover{
+                opacity: 1;
+                span{
+                    color: #fff;
+                }
+                &::before{
+                    transform: translateX(10%);
+
+                }
+            }
+
+
+        }
+
+    }
+    &__back{
+        text-align: center;
+        margin: 80px auto;
+        a{
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            text-indent: -9999px;
+            width: 180px;
+            height: 16px;
+            background: url('http://takanenonadeshiko.jp/wp-content/uploads/2023/06/img_backlink.png') no-repeat 0 0;
+            background-size: 100% auto;
+            margin: 0 auto;
+        }
+    }
+    &__post{
+        width: 100%;
+        border-top: solid 1px #FFF;
+        padding: 80px 0;
+        &--inner{
+            max-width: 980px;
+            padding: 0 30px;
+            margin: 0 auto;
+        }
+    }
+    //spサイズ ---------------------------------------------------------------------------------------- spサイズ//
+    @media only screen and (max-width: var.$bp) {
+        width: 100vw;
+        &__blc {
+            max-width: 100%;
+            padding: 0 5vw;
+            margin: 0 auto;        
+            display: block;
+        }
+        &__img{
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &__txtblc{
+            width: 100%;
+            max-width: 100%;
+        }
+        &__cate{
+            margin: 0 0 10px;
+            li{
+                p{
+                    font-size: 14px;
+                }
+            } 
+        }
+        &__txt {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+    
+        &__subttl {
+            margin: 0 0 14px;
+            line-height: 1.4;
+            font-size: 21px;
+            
+        }
+    
+        &__date {
+            font-size: 14px;
+        }
+    
+        &__tracklist {
+            width: 100%;
+            padding-top: 10vw;
+            margin-top: 10vw;
+            &--ttl{
+                font-size: 14px;
+                margin: 0 0 22px;
+
+            }
+            &--txt{
+                font-size: 14px;
+            }
+        }
+    
+        &__streaming{
+            &--btn{
+                font-size: 14px;
+                max-width: 100%;
+                margin-top: 10vw;
+            }
+    
+        }
+        &__back{
+            margin: 20vw auto;
+            a{
+                width: 160px;
+                height: 14px;
+            }
+        }
+        &__post{
+
+            padding:20vw 0;
+            &--inner{
+                max-width: 100%;
+                padding: 0 5vw;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+#discography {
+    padding-top: 140px;
+    background-color: #ffedf3;
+    @media only screen and (max-width: var.$bp) {
+        padding: 24vw 5% 10vw;
+
+    }
+}
+
+
+
