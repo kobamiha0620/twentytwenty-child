@@ -1,6 +1,12 @@
 <div class="front__bnrs--wrapper" >
     <ul class="font__bnrs mySwiper">
         <div class="swiper-wrapper">
+        
+            <li class="swiper-slide">
+                <a href="https://takanenonadeshiko.jp/events/event/%e9%ab%98%e5%b6%ba%e3%81%ae%e3%81%aa%e3%81%a7[…]%8d%e3%81%95%e3%81%88%e5%bf%98%e3%82%8c%e3%82%8b%e3%80%82/" target="_blank" rel="noopenner noreferrer" >
+                    <img src="http://takanenonadeshiko.jp/wp-content/uploads/2024/10/1500x500.jpeg" alt="">
+                </a>	
+            </li>
             <li class="swiper-slide">
                 <a href="https://takanekofc.com/" target="_blank" rel="noopenner noreferrer" >
                     <img src="http://takanenonadeshiko.jp/wp-content/uploads/2022/11/bnr_fan.jpg" alt="" style="border: solid 1px #eee;">
