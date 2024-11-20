@@ -42,3 +42,27 @@ const swiper = new Swiper(".mySwiper", {
             }
         },
   });
+
+  const topSwiper = new Swiper('.topSwiper', {
+    // Optional parameters
+    loop: true,
+    speed: 1500, // 少しゆっくり(デフォルトは300)
+    autoplay: { // 自動再生
+      delay: 1500, // 1.5秒後に次のスライド
+    },
+      effect: "fade",
+
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  
+  });

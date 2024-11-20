@@ -90,6 +90,16 @@
             background: url('http://takanenonadeshiko.jp/wp-content/uploads/2022/08/icon_footer-tiktok.png') no-repeat 0 0;
             background-size: 100% auto;
         }
+        &--discord{
+            text-indent: -9999px;
+            white-space: nowrap;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url('https://takanenonadeshiko.jp/wp-content/uploads/2024/05/img_discord.png') no-repeat 0 0;
+            background-size: 100% auto;
+        }
+        
     }
     //spサイズ
     @media only screen and (max-width: var.$bp) {

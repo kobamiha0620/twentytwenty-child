@@ -8,7 +8,7 @@
                 <?php
                 $args = array(
                     'cat' => '-1, -4', //メンバーを非表示
-                    'posts_per_page' => 2 // 表示件数の指定
+                    'posts_per_page' => 16 // 表示件数の指定
                 );
                     $posts = get_posts( $args );
                     foreach ( $posts as $post ): // ループの開始

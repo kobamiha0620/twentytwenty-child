@@ -1,7 +1,17 @@
 @use "./module/variable" as var;
-@use "./module/*" ;
-
+@use "./module/swiper" ;
+@use "./module/streaming" ;
+@use "./module/schedule" ;
+@use "./module/members" ;
+@use "./module/frontpage" ;
+@use "./module/front" ;
+@use "./module/footer" ;
+@use "./module/faq" ;
+@use "./module/discography" ;
+@use "./module/contact" ;
+@use "./module/about" ;
 /* 共通サイズ */
+
 body{
     box-sizing: border-box;
     max-width: 100%;
@@ -379,14 +389,14 @@ nav.primary-menu-wrapper{
 }
 @media only screen and (max-width: var.$bp) {
   .header-inner{
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 }
 
 
 
 #site-header{
-  background: rgba(244, 221, 233, 0.7)!important;
+  background: rgba(244, 221, 233, 1)!important;
 }
 main{
   padding-top: 140px;
@@ -396,7 +406,7 @@ main{
 }
 body.home{
   #site-header{
-    background: rgba(255, 255, 255, 0)!important;
+    // background: rgba(255, 255, 255, 0)!important;
   }
   main{
     padding-top: 0;
@@ -404,3 +414,7 @@ body.home{
   }
 }
 
+
+.site-logo img{
+  max-height: 4rem;
+}

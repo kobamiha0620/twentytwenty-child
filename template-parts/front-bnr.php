@@ -1,11 +1,6 @@
 <div class="front__bnrs--wrapper" >
     <ul class="font__bnrs mySwiper">
         <div class="swiper-wrapper">
-        <li class="swiper-slide">
-                <a href="/events/event/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/" target="_blank" rel="noopenner noreferrer" >
-                    <img src="http://takanenonadeshiko.jp/wp-content/uploads/2024/10/1500x300.jpg" alt="">
-                </a>	
-            </li>
             <li class="swiper-slide">
                 <a href="https://takanekofc.com/" target="_blank" rel="noopenner noreferrer" >
                     <img src="http://takanenonadeshiko.jp/wp-content/uploads/2022/11/bnr_fan.jpg" alt="" style="border: solid 1px #eee;">

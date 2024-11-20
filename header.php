@@ -80,7 +80,6 @@ wp_body_open();
 
 			<?php } ?>
 			<!-- トップページのみ表示しない -->
-			<?php if ( !is_home() && !is_front_page() ) : ?>
 			<div class="header-titles">
 
 				<?php
@@ -92,7 +91,6 @@ wp_body_open();
 				?>
 
 			</div><!-- .header-titles -->
-			<?php endif; ?>
 
 			<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 				<span class="toggle-inner">
