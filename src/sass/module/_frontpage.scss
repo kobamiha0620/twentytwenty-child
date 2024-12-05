@@ -1,6 +1,7 @@
 @use "./module/variable" as var;
 
 .front{
+    margin-top: 64px;
     &__fv{
         width: 100vw;
         img{
@@ -18,6 +19,7 @@
     }
     //spサイズ
     @media only screen and (max-width: var.$bp) {
+        margin-top: 60px;
 
     }
 }

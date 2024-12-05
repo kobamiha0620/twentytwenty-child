@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Twenty Twenty Child2410
+Theme Name: Twenty Twenty Child2411
 Version: 1.0
 Template: twentytwenty
 */
@@ -730,6 +730,9 @@ body.category-other .streaming__selectpc .select-other, body.category-other .str
   width: 100%;
 }
 
+.front {
+  margin-top: 64px;
+}
 .front__fv {
   width: 100vw;
 }
@@ -740,6 +743,12 @@ body.category-other .streaming__selectpc .select-other, body.category-other .str
 .front__bnrs li {
   margin: 0 10px;
 }
+@media only screen and (max-width: 768px) {
+  .front {
+    margin-top: 60px;
+  }
+}
+
 .front__fv {
   position: absolute;
   top: 0;
@@ -2086,6 +2095,10 @@ nav.primary-menu-wrapper .primary-menu li a {
 }
 nav.primary-menu-wrapper .primary-menu li a:hover {
   text-decoration: none;
+}
+
+.header-inner {
+  padding: 1rem 0;
 }
 
 @media only screen and (max-width: 768px) {

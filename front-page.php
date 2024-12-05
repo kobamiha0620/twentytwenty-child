@@ -181,17 +181,17 @@
 <!-- 5枚目の画像があるかどうかの表示 -->
 <?php if( get_field('img_fv05') ): ?>
 
-<?php if( get_field('img_fv05-sp') && get_field('img_link04')): ?>
+<?php if( get_field('img_fv05-sp') && get_field('img_link05')): ?>
 <!-- ①画像とSP画像とリンク -->
 <div class="swiper-slide">
-<a href="<?php the_field('img_link04'); ?>">
+<a href="<?php the_field('img_link05'); ?>">
 	<picture>
 		<source srcset="<?php the_field('img_fv05-sp'); ?>" media="(max-width: 768px)" type="image/png">
 		<img src="<?php the_field('img_fv05'); ?>" alt="①画像とSP画像とリンク">
 	</picture>
 </a>
 </div>
-<?php elseif( get_field('img_fv05-sp') && !get_field('img_link04')): ?>
+<?php elseif( get_field('img_fv05-sp') && !get_field('img_link05')): ?>
 <!-- ②画像とSP画像 -->
 <div class="swiper-slide">
 <picture>
@@ -200,7 +200,7 @@
 </picture>
 </div>
 
-<?php elseif( !get_field('img_fv05-sp') && get_field('img_link04')): ?>
+<?php elseif( !get_field('img_fv05-sp') && get_field('img_link05')): ?>
 <!-- ③画像とリンク -->
 <div class="swiper-slide">
 <a href="<?php the_field('img_link05'); ?>">
@@ -223,17 +223,17 @@
 <!-- 6枚目の画像があるかどうかの表示 -->
 <?php if( get_field('img_fv06') ): ?>
 
-<?php if( get_field('img_fv06-sp') && get_field('img_link04')): ?>
+<?php if( get_field('img_fv06-sp') && get_field('img_link06')): ?>
 <!-- ①画像とSP画像とリンク -->
 <div class="swiper-slide">
-<a href="<?php the_field('img_link04'); ?>">
+<a href="<?php the_field('img_link06'); ?>">
 	<picture>
 		<source srcset="<?php the_field('img_fv06-sp'); ?>" media="(max-width: 768px)" type="image/png">
 		<img src="<?php the_field('img_fv06'); ?>" alt="①画像とSP画像とリンク">
 	</picture>
 </a>
 </div>
-<?php elseif( get_field('img_fv06-sp') && !get_field('img_link04')): ?>
+<?php elseif( get_field('img_fv06-sp') && !get_field('img_link06')): ?>
 <!-- ②画像とSP画像 -->
 <div class="swiper-slide">
 <picture>
@@ -242,7 +242,7 @@
 </picture>
 </div>
 
-<?php elseif( !get_field('img_fv06-sp') && get_field('img_link04')): ?>
+<?php elseif( !get_field('img_fv06-sp') && get_field('img_link06')): ?>
 <!-- ③画像とリンク -->
 <div class="swiper-slide">
 <a href="<?php the_field('img_link06'); ?>">
@@ -265,17 +265,17 @@
 <!-- 7枚目の画像があるかどうかの表示 -->
 <?php if( get_field('img_fv07') ): ?>
 
-<?php if( get_field('img_fv07-sp') && get_field('img_link04')): ?>
+<?php if( get_field('img_fv07-sp') && get_field('img_link07')): ?>
 <!-- ①画像とSP画像とリンク -->
 <div class="swiper-slide">
-<a href="<?php the_field('img_link04'); ?>">
+<a href="<?php the_field('img_link07'); ?>">
 	<picture>
 		<source srcset="<?php the_field('img_fv07-sp'); ?>" media="(max-width: 768px)" type="image/png">
 		<img src="<?php the_field('img_fv07'); ?>" alt="①画像とSP画像とリンク">
 	</picture>
 </a>
 </div>
-<?php elseif( get_field('img_fv07-sp') && !get_field('img_link04')): ?>
+<?php elseif( get_field('img_fv07-sp') && !get_field('img_link07')): ?>
 <!-- ②画像とSP画像 -->
 <div class="swiper-slide">
 <picture>
@@ -284,7 +284,7 @@
 </picture>
 </div>
 
-<?php elseif( !get_field('img_fv07-sp') && get_field('img_link04')): ?>
+<?php elseif( !get_field('img_fv07-sp') && get_field('img_link07')): ?>
 <!-- ③画像とリンク -->
 <div class="swiper-slide">
 <a href="<?php the_field('img_link07'); ?>">
@@ -307,17 +307,17 @@
 <!-- 8枚目の画像があるかどうかの表示 -->
 <?php if( get_field('img_fv08') ): ?>
 
-<?php if( get_field('img_fv08-sp') && get_field('img_link04')): ?>
+<?php if( get_field('img_fv08-sp') && get_field('img_link08')): ?>
 <!-- ①画像とSP画像とリンク -->
 <div class="swiper-slide">
-<a href="<?php the_field('img_link04'); ?>">
+<a href="<?php the_field('img_link08'); ?>">
 	<picture>
 		<source srcset="<?php the_field('img_fv08-sp'); ?>" media="(max-width: 768px)" type="image/png">
 		<img src="<?php the_field('img_fv08'); ?>" alt="①画像とSP画像とリンク">
 	</picture>
 </a>
 </div>
-<?php elseif( get_field('img_fv08-sp') && !get_field('img_link04')): ?>
+<?php elseif( get_field('img_fv08-sp') && !get_field('img_link08')): ?>
 <!-- ②画像とSP画像 -->
 <div class="swiper-slide">
 <picture>
@@ -326,7 +326,7 @@
 </picture>
 </div>
 
-<?php elseif( !get_field('img_fv08-sp') && get_field('img_link04')): ?>
+<?php elseif( !get_field('img_fv08-sp') && get_field('img_link08')): ?>
 <!-- ③画像とリンク -->
 <div class="swiper-slide">
 <a href="<?php the_field('img_link08'); ?>">
