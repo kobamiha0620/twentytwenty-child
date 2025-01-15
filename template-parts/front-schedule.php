@@ -9,7 +9,7 @@
 
             <?php
             $events = eo_get_events(array(
-                    'numberposts'=>5,
+                    'numberposts'=>10,
                     'event_start_after'=>'today',
                     'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
                 ));
@@ -24,28 +24,26 @@
                     // make date object
                 ?>
                     <li class="front__schedule--list">
-                   
-                   
-                   
 
                         <a href="<?php the_permalink($event->ID); ?>" class="front__schedule--link">
-                            <div class="front__schedule--img">
-                                <?php if( has_post_thumbnail($event->ID) ): ?>
-                                    <?php echo do_shortcode(' [eo_events]%event_thumbnail% [/eo_events]'); ?>
-                                <?php else: ?>
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/noimage_schedule.png" alt="no-img"/>
-                                <?php endif; ?>
-                            </div>
+                            <!-- <div class="front__schedule--img">
+                                < ?php if( has_post_thumbnail($event->ID) ): ?>
+                                    < ?php echo do_shortcode(' [eo_events]%event_thumbnail% [/eo_events]'); ?>
+                                < ?php else: ?>
+                                    <img src="< ?php echo get_stylesheet_directory_uri(); ?>/assets/images/noimage_schedule.png" alt="no-img"/>
+                                < ?php endif; ?>
+                            </div> -->
                             <div>
-                                <p class="front__schedule--ttl"><?php echo get_the_title($event->ID); ?></p>
 
                                 <div class="front__schedule--cateblc">
+                                <span class="front__schedule--badge">NEW</span>
+                                <p class="front__schedule--cateblc-date"><?php echo eo_get_the_start( $format, $event->ID, $event->occurrence_id ); ?></p>
 
-                                    <p class="front__schedule--cateblc-date"><?php echo eo_get_the_start( $format, $event->ID, $event->occurrence_id ); ?>
-                                </p>
+
                 
                                 </div>
-                                <p class="front__schedule--exerpt"><?php echo get_the_excerpt($event->ID); ?> </p>
+                                <!-- <p class="front__schedule--exerpt">< ?php echo get_the_excerpt($event->ID); ?> </p> -->
+                                <p class="front__schedule--ttl"><?php echo get_the_title($event->ID); ?></p>
 
                             </div>           
                         </a>

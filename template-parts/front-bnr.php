@@ -23,7 +23,6 @@
                 </a>	
             </li>
         </div>
-        <div class="swiper-pagination"></div>
     </ul>
 
 </div>

@@ -42,7 +42,7 @@
     &__bnrs {
 
         &--wrapper {
-            margin: 30px 0;
+            margin: 20px 0;
             position: relative;
             overflow: hidden;
         }
@@ -71,21 +71,21 @@
         }
 
         &--link {
-            margin: 0 0 20px;
+            margin: 0 0 26px;
             display: flex;
             text-decoration: none;
             color: #444;
         }
 
         &--ttl {
-            margin: 0 0 3px;
+            margin: 10px 0 0;
             line-height: 1.4;
-            font-size: 22px;
+            font-size: 18px;
         }
 
         &--lists {
             li {
-                margin: 0 0 38px;
+                margin: 0 0 26px;
 
                 img {
                     width: 100%;
@@ -100,23 +100,32 @@
 
         &--cates {
             margin: 0 10px 0 0;
-
+            display: flex;
+            align-items: center;
             span {
-                font-size: 14px;
+                font-size: 12px;
                 padding: 3px 10px;
                 line-height: 0.9;
-
                 display: inline-block;
                 margin: 0 5px 0 0;
-
+                @media only screen and (max-width: var.$bp) {
+                    font-size: 10px;
+                    padding: 2px 5px;
+                  }
                 &.cate-news {
                     border: solid 1px var.$pink;
                     color: var.$pink;
+                    
                 }
 
                 &.cate-media {
                     border: solid 1px var.$perpul;
                     color: var.$perpul;
+                }
+
+                &.cate-topic {
+                    border: solid 1px var.$blue;
+                    color: var.$blue;
                 }
             }
         }
@@ -124,7 +133,7 @@
         &--cateblc {
             display: flex;
             align-items: center;
-            margin: 0 0 6px;
+            margin: 0 0;
 
             p {
                 margin: 0;
@@ -140,6 +149,7 @@
 
         @media only screen and (max-width: var.$bp) {
             padding: 10vw 5%;
+            
         }
 
     }
@@ -175,15 +185,15 @@
         }
 
         &--ttl {
-            margin: 0 0 10px;
+            margin: 10px 0 0;
             line-height: 1.4;
-            font-size: 22px;
+            font-size: 18px;
         }
 
         &--lists {
 
             li {
-                margin-bottom: 38px;
+                margin-bottom: 20px;
 
                 img {
                     width: 100%;
@@ -192,7 +202,7 @@
         }
 
         &--list {
-            margin: 0 0 30px;
+            margin: 0 0 20px;
         }
 
         &--exerpt {
@@ -249,13 +259,12 @@
             }
 
             &--img {
-                min-width: 80px;
-                max-width: 80px;
-                margin: 0 16px 0 0;
+                min-width: 16vw;
+                margin: 0 3vw 0 0;
 
                 img {
-                    height: 80px;
-                    width: 80px;
+                    height: 16vw;
+                    width: 16vw;
                 }
             }
 
@@ -264,8 +273,8 @@
             }
 
             &--ttl {
-                margin: 0 0 10px;
-                font-size: 18px;
+                margin: 6px 0 0;
+                font-size: 16px;
             }
 
             &--lists {
@@ -291,7 +300,7 @@
             &--cateblc {
                 display: flex;
                 align-items: center;
-                margin: 6px 0;
+                margin: 0 0;
 
                 &-date {
                     display: inline-block;
@@ -338,27 +347,35 @@
 
             &--img {
                 min-width: 80px;
-                max-width: 80px;
                 margin: 0 16px 0 0;
-
                 img {
                     height: 80px;
                     width: 80px;
                 }
+                @media only screen and (max-width: var.$bp) {
+                    min-width: 16vw;
+                    margin: 0 3vw 0 0;
+    
+                    img {
+                        height: 16vw;
+                        width: 16vw;
+                    }
+                
+                }
             }
 
             &--link {
-                margin: 0 0 20px;
+                margin: 0 0 5vw;
             }
 
             &--ttl {
-                margin: 0 0 10px;
-                font-size: 18px;
+                margin: 6px 0 0;
+                font-size: 16px;
             }
 
             &--lists {
                 li {
-                    margin: 0 0 30px;
+                    margin: 0 0 5vw;
                 }
             }
 
@@ -379,7 +396,7 @@
             &--cateblc {
                 display: flex;
                 align-items: center;
-                margin: 6px 0;
+                margin: 0;
 
                 &-date {
                     display: inline-block;
@@ -579,4 +596,73 @@
     
         }
     }
+}
+
+
+
+.front{
+    &__topics{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 56px;
+        @media only screen and (max-width: var.$bp) {
+            display: block;
+        }
+    }
+    &__topics--blc{
+        display: block;
+        text-decoration: none;
+        border: solid 1px #ccc;
+        padding: 16px 16px 10px;
+        min-width: 32%;
+        max-width: 32%;
+        @media only screen and (max-width: var.$bp) {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            margin-bottom: 2vw;
+        }
+    }
+    &__topics--badge{
+        color: #FFF;
+        background-color: var.$blue;
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 100%;
+        padding: 3px 5px;
+        margin-bottom: 0;
+        margin-right: 8px;
+        @media only screen and (max-width: var.$bp) {
+            font-size: 10px;
+        }
+
+    }
+    &__topics--txtblc{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        @media only screen and (max-width: var.$bp) {
+            margin-bottom: 8px;
+        }
+    }
+    &__topics--date{
+        font-size: 14px;
+        line-height: 100%;
+        margin-bottom: 0;
+        color: #444;
+        @media only screen and (max-width: var.$bp) {
+            font-size: 12px;
+        }
+    }
+    &__topics--heading{
+        color: #444;
+        font-size: 16px;
+        line-height: 1.4;
+        @media only screen and (max-width: var.$bp) {
+            font-size: 14px;
+        }
+    }
+
 }

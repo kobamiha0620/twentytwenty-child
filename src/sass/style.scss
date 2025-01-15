@@ -125,12 +125,17 @@ body{
 
  .main{
    &__subttl{
-     font-weight: normal;
-     letter-spacing: 0.8em;
+     font-weight: bold;
+     letter-spacing: 0.2em;
      margin-top: 0;
-     font-size: 1.5em;
-     color: #444444;
-     margin-bottom: 2em;
+     font-size: 2em;
+     color: #646767;
+     margin-bottom: 3em;
+     @media only screen and (max-width: var.$bp) {
+      margin-bottom: 1em;
+      font-size: 24px;  
+     }
+
    }
    &__link{
      text-decoration: none;
@@ -369,6 +374,18 @@ div.ewd-ufaq-faq-title div.ewd-ufaq-post-margin-symbol {
     padding-right: 8vw;
     padding-left: 8vw;
   }
+  .front__news--ttl{
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+  .front__news--img{
+    max-width: 16vw;
+    margin-right: 3vw;
+  }
+
+  .front__schedule--ttl{
+    margin-bottom: 0;
+  }
 }
 
 //追記230630
@@ -420,4 +437,48 @@ body.home{
 
 .site-logo img{
   max-height: 4rem;
+}
+
+//追記
+.front__news--cateblc{
+  margin-bottom: 3px;
+  @media only screen and (max-width: var.$bp) {
+    margin-bottom: 2px;
+  }
+}
+.front__news--badge{
+  color: #FFF;
+  display: inline-block;
+  border: solid 1px var.$pinkbold;
+  background-color: var.$pinkbold;
+  margin-right: 10px;
+  white-space: nowraps;
+  line-height: 100%;
+  font-size: 12px;
+  padding: 3px 8px 3px;
+  @media only screen and (max-width: var.$bp) {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}
+.front__schedule--badge{
+  color: #FFF;
+  display: inline-block;
+  border: solid 1px var.$perpul;
+  background-color: var.$perpul;
+  margin-right: 10px;
+  white-space: nowraps;
+  line-height: 100%;
+  font-size: 12px;
+  padding: 3px 8px 3px;
+  @media only screen and (max-width: var.$bp) {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+}
+.front__news--li{
+  border-bottom: solid 1px #ccc;
+}
+.front__schedule--list{
+  border-bottom: solid 1px #ccc;
 }

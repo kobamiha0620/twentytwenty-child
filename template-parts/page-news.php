@@ -8,13 +8,13 @@
                 <?php
                 $args = array(
                     'cat' => '-1, -4', //メンバーを非表示
-                    'posts_per_page' => 16 // 表示件数の指定
+                    'posts_per_page' => -1 // 表示件数の指定
                 );
                     $posts = get_posts( $args );
                     foreach ( $posts as $post ): // ループの開始
                     setup_postdata( $post ); // 記事データの取得
                 ?>
-                <li>
+                <li class="front__news--li">
                     <a href="<?php the_permalink(); ?>" class="front__news--link">
                         <div class="front__news--img">
                         <?php if( has_post_thumbnail() ): ?>

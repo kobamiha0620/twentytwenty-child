@@ -34,6 +34,7 @@
         margin: 0;
         text-align: center; 
         font-size: 0.8em;
+        white-space: nowrap;
     }
     &__btm--wrapper{
         display: flex;
@@ -57,6 +58,7 @@
             color: #444;
             font-size: 14px;
             text-decoration: underline;
+            white-space: nowrap;
             border-bottom: solid 1px #eee;
             &:hover{
                 border-bottom: none;
@@ -99,6 +101,15 @@
             background: url('https://takanenonadeshiko.jp/wp-content/uploads/2024/05/img_discord.png') no-repeat 0 0;
             background-size: 100% auto;
         }
+        &--facebook{
+            text-indent: -9999px;
+            white-space: nowrap;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: url('https://takanenonadeshiko.jp/wp-content/uploads/2024/12/logo_facebook.png') no-repeat 0 0;
+            background-size: 100% auto;
+        }
         
     }
     //spサイズ
@@ -118,7 +129,8 @@
             }
         }
         &__inquiery{
-            margin: 0 auto 5vw;
+            margin: 10vw auto 10vw;
+            width: 60vw;
         }
     }
 }

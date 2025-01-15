@@ -28,6 +28,7 @@
 						<a href="https://www.tiktok.com/@takanenofficial" target="_blank"
 							class="footer__sns--tiktok">Tiktok</a>
 						<a href="https://discord.gg/takanenonadeshiko" target="_blank" class="footer__sns--discord">Discord</a>
+						<a href="https://www.facebook.com/people/%E9%AB%98%E5%B6%BA%E3%81%AE%E3%81%AA%E3%81%A7%E3%81%97%E3%81%93-Takane-No-Nadeshiko/61554973852737/" target="_blank" class="footer__sns--facebook">Facebook</a>
 
 					</div>
 				</div>
