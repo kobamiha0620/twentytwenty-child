@@ -1,0 +1,73 @@
+@use "../module/variable"as var;
+
+.p-home{
+  &__sns{
+
+    position: fixed;
+
+    z-index: 10;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    @include var.mq(pc) {
+      bottom: 2vw;
+      left: 2vw;
+    }
+    @include var.mq(sp) {
+      bottom: 3vw;
+      left: 3vw;
+    }
+    &.fadeOut {
+      animation-name: fade-out;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    &.fadeIn {
+      animation-name: fade-in;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    .u-sns{
+      justify-content: center;
+      @include var.mq(pc) {
+        a{
+          margin-right: 16px;
+        }
+      }
+      @include var.mq(sp) {
+        align-items: center;
+        a{
+          margin-right: 8px;
+          width: 24px;
+          height: 24px;
+          &.u-sns__bilibili{
+            width: 30px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-out {
+  0% {
+     opacity:  1;
+  }
+  100% {
+     opacity: 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+     opacity:  0;
+  }
+  100% {
+     opacity: 1;
+  }
+}
+
+
+

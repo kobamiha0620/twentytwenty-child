@@ -1,0 +1,26 @@
+@use "../module/variable"as var;
+
+.l-header{
+  &__wrapper{
+    @include var.mq(pc) {
+
+    }
+    @include var.mq(sp) {
+  
+    }
+  }
+
+  &__logo{
+    @include var.mq(pc) {
+      max-width: 180px;
+    }
+    @include var.mq(sp) {
+      max-width: 120px;
+    }
+  }
+} 
+.header-inner{
+
+}
+
+

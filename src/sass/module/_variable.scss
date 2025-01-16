@@ -1,11 +1,14 @@
 /*
-Theme Name: Twenty Twenty Child2412
+Theme Name: Twenty Twenty Child2501
 Version: 1.0
 Template: twentytwenty
 */
+@use "sass:map";
+
 .test{
-    color: rgb(233, 166, 166);
+    color: red;
 }
+
 $basic: #444444;
 $pink: #fcb9ce;
 $bp: 768px;
@@ -13,6 +16,9 @@ $pcbp: 1080px;
 $perpul: #b38fe2;
 $pinkbold: #E2759B;;
 $blue: #75C0DA;
+$pcHeader: 64px;
+$spHeader: 64px;
+$imgPath: '/wp-content/themes/twentytwenty-child/assets/images/';
 /* ANIMATION*/
 @keyframes fadeInAnime{
     0% {
@@ -38,4 +44,16 @@ $blue: #75C0DA;
 
 .eigo{
     font-family: 'Poppins', sans-serif;
+}
+
+
+$breakpoint: (
+  sp: 'screen and (max-width: 1079px)',
+  pc: 'screen and (min-width: 1080px)',
+);
+
+@mixin mq($bp) {
+    @media #{map.get($breakpoint, $bp)} {
+        @content;
+  }
 }

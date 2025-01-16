@@ -1,0 +1,26 @@
+@use "../module/variable"as var;
+
+
+.l-footer {
+  &__sns {
+    .u-sns{
+      justify-content: center;
+      @include var.mq(pc) {
+        a{
+          margin-right: 16px;
+        }
+      }
+
+    }
+    @include var.mq(sp) {
+      margin: 0 auto;
+      max-width: 260px;
+      padding-left: 14px;
+      a{
+        margin-right: 14px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+}

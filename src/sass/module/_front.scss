@@ -1,4 +1,4 @@
-@use "./module/variable"as var;
+@use "../module/variable"as var;
 
 
 
@@ -557,8 +557,10 @@
         .swiper-slide {
             background-color: #FFF;
             width: 100%;
-            max-height: 100dvh;
-            max-height: 100vh;
+            height: calc(100vh - var.$pcHeader);
+            height: calc(100dvh - var.$pcHeader);
+            max-height: calc(100dvh - var.$pcHeader);
+            max-height: calc(100vh - var.$pcHeader);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -666,3 +668,30 @@
     }
 
 }
+
+.front__wrapper{
+    @include var.mq(pc){
+        height: calc(100vh - var.$pcHeader);
+        max-height: calc(100vh - var.$pcHeader);
+        position: relative;
+        overflow: hidden;
+    
+        &::before {
+          animation: img-wrap 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          background: #F4DDE8;
+          content: '';
+          inset: 0;
+          pointer-events: none;
+          position: absolute;
+          z-index: 11;
+        }
+    
+    }
+
+}
+
+@keyframes img-wrap {
+    100% {
+      transform: translateX(100%);
+    }
+  }

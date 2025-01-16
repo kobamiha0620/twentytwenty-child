@@ -1,0 +1,68 @@
+@use "../module/variable"as var;
+
+.u-sns{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a{
+      display: block;
+      white-space: nowrap;
+      text-indent: -9999px;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+  }
+  &__tiktok{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/tiktok.png');
+      width: 30px;
+      height: 30px;
+  }
+  &__insta{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/insta.png');
+      width: 30px;
+      height: 30px;
+  }
+  &__facebook{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/facebook.png');
+      width: 30px;
+      height: 30px;
+  }
+  &__youtube{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/youtube.png');
+      width: 30px;
+      height: 30px;
+      box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+
+  }
+  &__discord{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/dicord.png');
+      width: 30px;
+      height: 30px;
+  }
+  &__douyin{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/douyin.png');
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.3);
+  }
+  &__redbook{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/redbook.png');
+      width: 30px;
+      height: 30px;
+  }
+  &__weibo{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/weibo.png');
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.3);
+  }
+  &__bilibili{
+      background-image: url('https://takanenonadeshiko.jp/wp-content/uploads/2025/01/bilibili.png');
+      width: 50px;
+      height: 25px;
+
+  }
+}

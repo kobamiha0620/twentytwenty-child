@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*
-Theme Name: Twenty Twenty Child2412
+Theme Name: Twenty Twenty Child2501
 Version: 1.0
 Template: twentytwenty
 */
 .test {
-  color: rgb(233, 166, 166);
+  color: red;
 }
 
 /* ANIMATION*/
@@ -1189,8 +1189,10 @@ body.category-other .streaming__selectpc .select-other, body.category-other .str
 #front .topSwiper .swiper-slide {
   background-color: #FFF;
   width: 100%;
-  max-height: 100dvh;
-  max-height: 100vh;
+  height: calc(100vh - 64px);
+  height: calc(100dvh - 64px);
+  max-height: calc(100dvh - 64px);
+  max-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1300,9 +1302,33 @@ body.category-other .streaming__selectpc .select-other, body.category-other .str
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .front__wrapper {
+    height: calc(100vh - 64px);
+    max-height: calc(100vh - 64px);
+    position: relative;
+    overflow: hidden;
+  }
+  .front__wrapper::before {
+    animation: img-wrap 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    background: #F4DDE8;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 11;
+  }
+}
+
+@keyframes img-wrap {
+  100% {
+    transform: translateX(100%);
+  }
+}
 .footer__inner {
   max-width: 600px;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 .footer__inner--bnr {
   display: flex;
@@ -1846,10 +1872,185 @@ body.page-id-167 main, body.page-id-55 main {
   color: #b38fe2;
 }
 
+@media screen and (min-width: 1080px) {
+  .l-header__logo {
+    max-width: 180px;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .l-header__logo {
+    max-width: 120px;
+  }
+}
+
+.l-footer__sns .u-sns {
+  justify-content: center;
+}
+@media screen and (min-width: 1080px) {
+  .l-footer__sns .u-sns a {
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .l-footer__sns {
+    margin: 0 auto;
+    max-width: 260px;
+    padding-left: 14px;
+  }
+  .l-footer__sns a {
+    margin-right: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+.l-menu__sns {
+  max-width: 260px;
+  margin-top: 1.8em;
+}
+.l-menu__sns .u-sns a {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.p-home__sns {
+  position: fixed;
+  z-index: 10;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@media screen and (min-width: 1080px) {
+  .p-home__sns {
+    bottom: 2vw;
+    left: 2vw;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .p-home__sns {
+    bottom: 3vw;
+    left: 3vw;
+  }
+}
+.p-home__sns.fadeOut {
+  animation-name: fade-out;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.p-home__sns.fadeIn {
+  animation-name: fade-in;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.p-home__sns .u-sns {
+  justify-content: center;
+}
+@media screen and (min-width: 1080px) {
+  .p-home__sns .u-sns a {
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .p-home__sns .u-sns {
+    align-items: center;
+  }
+  .p-home__sns .u-sns a {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+  }
+  .p-home__sns .u-sns a.u-sns__bilibili {
+    width: 30px;
+    height: 16px;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.u-sns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.u-sns a {
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.u-sns__tiktok {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/tiktok.png");
+  width: 30px;
+  height: 30px;
+}
+.u-sns__insta {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/insta.png");
+  width: 30px;
+  height: 30px;
+}
+.u-sns__facebook {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/facebook.png");
+  width: 30px;
+  height: 30px;
+}
+.u-sns__youtube {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/youtube.png");
+  width: 30px;
+  height: 30px;
+  box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.u-sns__discord {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/dicord.png");
+  width: 30px;
+  height: 30px;
+}
+.u-sns__douyin {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/douyin.png");
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.3);
+}
+.u-sns__redbook {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/redbook.png");
+  width: 30px;
+  height: 30px;
+}
+.u-sns__weibo {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/weibo.png");
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0 3px 0px rgba(0, 0, 0, 0.3);
+}
+.u-sns__bilibili {
+  background-image: url("https://takanenonadeshiko.jp/wp-content/uploads/2025/01/bilibili.png");
+  width: 50px;
+  height: 25px;
+}
+
 /* 共通サイズ */
 body {
   box-sizing: border-box;
   max-width: 100%;
+  overflow-x: hidden;
   color: #444444;
 }
 
@@ -2007,21 +2208,27 @@ li {
   list-style-type: none;
 }
 
-html, body {
-  height: 100%; /*高さを100%にして描画エリアをとる*/
+html,
+body {
+  height: 100%;
+  /*高さを100%にして描画エリアをとる*/
 }
 
 #particles-js {
-  position: absolute; /*描画固定*/
-  z-index: 2; /*描画を一番下に*/
+  position: absolute;
+  /*描画固定*/
+  z-index: 2;
+  /*描画を一番下に*/
   width: 100%;
   top: 0;
   background-color: rgba(0, 0, 0, 0);
 }
 
 #wrapper {
-  position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
-  z-index: 1; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  position: relative;
+  /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 1;
+  /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
   width: 100%;
   height: 100%;
 }
@@ -2046,13 +2253,24 @@ a:hover {
   opacity: 0.7;
 }
 
-.modal-menu > li > a, .modal-menu > li > .ancestor-wrapper > a {
+.modal-menu > li > a,
+.modal-menu > li > .ancestor-wrapper > a {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.0375em;
 }
 
-.header-footer-group pre, .header-footer-group fieldset, .header-footer-group input, .header-footer-group textarea, .header-footer-group table, .header-footer-group table *, .footer-nav-widgets-wrapper, #site-footer, .menu-modal nav *, .footer-widgets-outer-wrapper, .footer-top {
+.header-footer-group pre,
+.header-footer-group fieldset,
+.header-footer-group input,
+.header-footer-group textarea,
+.header-footer-group table,
+.header-footer-group table *,
+.footer-nav-widgets-wrapper,
+#site-footer,
+.menu-modal nav *,
+.footer-widgets-outer-wrapper,
+.footer-top {
   border-color: #dcd7ca;
 }
 
@@ -2305,3 +2523,5 @@ body.home main {
 .front__schedule--list {
   border-bottom: solid 1px #ccc;
 }
+
+/*# sourceMappingURL=style.css.map */
